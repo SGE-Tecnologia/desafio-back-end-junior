@@ -1,18 +1,51 @@
-# Desafio Back-end Júnior
-Seja bem-vindo! Este desafio foi projetado para avaliar a sua capacidade técnica como candidato.
+# **Desafio Back-end Júnior**
 
-Você deverá desenvolver um blog. Para isso, queremos que você desenvolva uma API REST utilizando Java com Spring Boot que deve conter as seguintes rotas:
+Seja bem-vindo! Este desafio foi projetado para avaliar sua capacidade técnica como candidato(a) à vaga de **Desenvolvedor(a) Back-end Júnior**.
 
-- `/register` - [POST] - esta rota deve cadastrar um usuário;
-- `/login` - [POST] - esta rota deve autenticar um usuário;
-- `/posts` - [POST] - esta rota deve cadastrar uma postagem mantendo a referência do autor. (requer autenticação);
-- `/posts/{id}` - [PUT] - esta rota deve editar a postagem do ID especificado mantendo a referência do autor. (requer autenticação);
-- `/posts` - [GET] - esta rota deve retornar a lista de todas as postagens ordenadas das mais recentes para as mais antigas com a possibilidade de inverter esta ordenação e de retornar apenas as postagens do usuário que fez a requisição (requer autenticação);
-- `/posts/{id}` - [GET] - esta rota deve retornar a postagem do ID especificado com todos os seus dados  (requer autenticação);
-- `/posts/{id}` - [DELETE] - esta rota deve deletar a postagem do ID especificado.
+---
 
-Crie o seu projeto como um repositório público do github e nos envie o link.
+## **Proposta**
+Você deverá desenvolver uma **API REST** de um **blog**, com funcionalidades de autenticação e gerenciamento de postagens.  
+O projeto deve ser desenvolvido em **Java com Spring Boot**.
+
+O objetivo é avaliar:
+- Estruturação de API REST;
+- Manipulação de banco de dados;
+- Implementação de autenticação;
+- Boas práticas de organização e código.
+
+---
+
+## **Requisitos do Back-end**
+A API deve conter as seguintes rotas:
+
+- **`/register`** – [POST] – Cadastrar um novo usuário.
+- **`/login`** – [POST] – Autenticar um usuário e retornar um token JWT.
+- **`/posts`** – [POST] (requer autenticação) – Cadastrar uma nova postagem, mantendo a referência do autor.
+- **`/posts/{id}`** – [PUT] (requer autenticação) – Editar a postagem pelo ID, mantendo a referência do autor.
+- **`/posts`** – [GET] (requer autenticação) – Retornar a lista de todas as postagens:
+    - Ordenadas das mais recentes para as mais antigas (ou inverso, se solicitado);
+    - Com opção de retornar apenas as postagens do usuário autenticado.
+- **`/posts/{id}`** – [GET] (requer autenticação) – Retornar a postagem pelo ID, com todos os seus dados.
+- **`/posts/{id}`** – [DELETE] (requer autenticação) – Excluir a postagem pelo ID.
 
 **Observações:**
-- A API deve retornar e receber os dados em formato JSON
-- Você pode utilizar o banco de dados de sua preferência (relacional ou não relacional).
+- Todas as rotas devem receber e retornar **JSON**.
+- Você pode utilizar qualquer banco de dados (relacional ou não-relacional).
+- A autenticação deve ser implementada com **JWT**.
+
+---
+
+## **Entrega**
+- Publique seu projeto no **GitHub** em um repositório público.
+- Inclua no **README**:
+    - Passos para rodar o back-end;
+    - Dependências utilizadas.
+
+---
+
+## **Diferenciais**
+- Deploy do back-end em um ambiente de nuvem.
+- Utilização de **Docker** para rodar a aplicação.
+- Criação de **testes unitários**.
+- Implementação de paginação e filtros adicionais para listagem de postagens.
